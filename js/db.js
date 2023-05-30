@@ -20,7 +20,7 @@ const addMember = (id, pw, mail) => {
 const searchMember = (id, pw) => {
     console.log('searchMember() CALLED!!!');
 
-    let memObject = memberDB.get(id);
+    let memObj = memberDB.get(id);
     if(memObj !== undefined && memObj.u_pw == pw){
         console.log('SIGN IN SUCCESS!!');
         return true;
@@ -42,11 +42,11 @@ const addDiary = (txt) => {
 
     console.log('diaryArr: ', diaryArr);
 }
-const searchDiary = () => {
-    console.log('searchDiary() CALLED!!!');
+const searchDiaries = () => {
+    console.log('searchDiaries() CALLED!!!');
     let diaryArr = diaryDB.get(signInedMemberId);
-    console.log(diaryArr);
-    
+    console.log('diaryArr : ', diaryArr);
+
     return diaryArr;
 }
 /* DIARY DB END */
